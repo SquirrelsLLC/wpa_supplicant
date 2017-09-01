@@ -1,11 +1,11 @@
 ../src/drivers/drivers.o: ../src/drivers/drivers.c \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/includes.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/build_config.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/common.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/os.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/wpa_debug.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/wpabuf.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/build_config.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/os.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpa_debug.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
  ../src/drivers/driver.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/common/defs.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/common/ieee802_11_defs.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/list.h
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_defs.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h

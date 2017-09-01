@@ -1,18 +1,18 @@
 ../src/eap_server/eap_server.o: ../src/eap_server/eap_server.c \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/includes.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/build_config.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/common.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/os.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/wpa_debug.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/wpabuf.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/crypto/sha256.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/build_config.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/os.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpa_debug.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/crypto/sha256.h \
  ../src/eap_server/eap_i.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/wpabuf.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/eap_server/eap.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/common/defs.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/list.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/eap_common/eap_defs.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/eap_server/eap_methods.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/eap_common/eap_common.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/state_machine.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/common/wpa_ctrl.h
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/eap_server/eap.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/eap_common/eap_defs.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/eap_server/eap_methods.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/eap_common/eap_common.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/state_machine.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_ctrl.h

@@ -1,20 +1,20 @@
 ../src/rsn_supp/peerkey.o: ../src/rsn_supp/peerkey.c \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/includes.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/build_config.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/common.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/os.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/wpa_debug.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/wpabuf.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/eloop.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/crypto/sha1.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/crypto/sha256.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/crypto/random.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/common/ieee802_11_defs.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/common.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/build_config.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/os.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpa_debug.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/eloop.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/crypto/sha1.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/crypto/sha256.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/crypto/random.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_defs.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
  ../src/rsn_supp/wpa.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/common/defs.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/common/eapol_common.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/common/wpa_common.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/common/eapol_common.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_common.h \
  ../src/rsn_supp/wpa_i.h \
- /home/david/Development/wpa_supplicant/wpa_supplicant-2.6/src/utils/list.h \
+ /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
  ../src/rsn_supp/wpa_ie.h ../src/rsn_supp/peerkey.h
