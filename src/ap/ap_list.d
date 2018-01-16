@@ -1,25 +1,8 @@
-../src/ap/ap_list.o: ../src/ap/ap_list.c \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/build_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/os.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpa_debug.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/eloop.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- ../src/ap/hostapd.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- ../src/ap/ap_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/ip_addr.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/fst/fst.h \
- ../src/ap/vlan.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/drivers/driver.h \
- ../src/ap/ieee802_11.h ../src/ap/sta_info.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- ../src/ap/beacon.h ../src/ap/ap_list.h
+ap_list.o: ap_list.c ../utils/includes.h ../utils/build_config.h \
+ ../utils/common.h ../utils/os.h ../utils/wpa_debug.h ../utils/wpabuf.h \
+ ../utils/eloop.h ../common/ieee802_11_defs.h \
+ ../common/ieee802_11_common.h ../common/defs.h hostapd.h \
+ ../common/defs.h ../utils/list.h ap_config.h ../utils/ip_addr.h \
+ ../common/wpa_common.h ../wps/wps.h ../wps/wps_defs.h ../fst/fst.h \
+ vlan.h ../drivers/driver.h ieee802_11.h sta_info.h ../utils/list.h \
+ beacon.h ap_list.h

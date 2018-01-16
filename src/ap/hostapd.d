@@ -1,41 +1,15 @@
-../src/ap/hostapd.o: ../src/ap/hostapd.c \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/build_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/os.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpa_debug.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/eloop.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_ctrl.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/hw_features_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/drivers/driver.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/radius/radius_client.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/ip_addr.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/radius/radius_das.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/eap_server/tncs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/eapol_auth/eapol_auth_sm.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/eapol_auth/eapol_auth_sm_i.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/radius/radius.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/fst/fst.h \
- ../src/ap/hostapd.h ../src/ap/ap_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps_defs.h \
- ../src/ap/vlan.h ../src/ap/authsrv.h ../src/ap/sta_info.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- ../src/ap/accounting.h ../src/ap/ap_list.h ../src/ap/beacon.h \
- ../src/ap/iapp.h ../src/ap/ieee802_1x.h ../src/ap/ieee802_11_auth.h \
- ../src/ap/vlan_init.h ../src/ap/wpa_auth.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/eapol_common.h \
- ../src/ap/wps_hostapd.h ../src/ap/hw_features.h \
- ../src/ap/wpa_auth_glue.h ../src/ap/ap_drv_ops.h ../src/ap/p2p_hostapd.h \
- ../src/ap/gas_serv.h ../src/ap/dfs.h ../src/ap/ieee802_11.h \
- ../src/ap/bss_load.h ../src/ap/x_snoop.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/l2_packet/l2_packet.h \
- ../src/ap/dhcp_snoop.h ../src/ap/ndisc_snoop.h ../src/ap/neighbor_db.h \
- ../src/ap/rrm.h
+hostapd.o: hostapd.c ../utils/includes.h ../utils/build_config.h \
+ ../utils/common.h ../utils/os.h ../utils/wpa_debug.h ../utils/wpabuf.h \
+ ../utils/eloop.h ../common/ieee802_11_defs.h ../common/wpa_ctrl.h \
+ ../common/hw_features_common.h ../drivers/driver.h ../common/defs.h \
+ ../utils/list.h ../radius/radius_client.h ../utils/ip_addr.h \
+ ../radius/radius_das.h ../eap_server/tncs.h \
+ ../eapol_auth/eapol_auth_sm.h ../eapol_auth/eapol_auth_sm_i.h \
+ ../radius/radius.h ../fst/fst.h hostapd.h ap_config.h \
+ ../common/wpa_common.h ../common/ieee802_11_common.h ../common/defs.h \
+ ../wps/wps.h ../wps/wps_defs.h vlan.h authsrv.h sta_info.h \
+ ../utils/list.h accounting.h ap_list.h beacon.h iapp.h ieee802_1x.h \
+ ieee802_11_auth.h vlan_init.h wpa_auth.h ../common/eapol_common.h \
+ wps_hostapd.h hw_features.h wpa_auth_glue.h ap_drv_ops.h p2p_hostapd.h \
+ gas_serv.h dfs.h ieee802_11.h bss_load.h x_snoop.h \
+ ../l2_packet/l2_packet.h dhcp_snoop.h ndisc_snoop.h neighbor_db.h rrm.h

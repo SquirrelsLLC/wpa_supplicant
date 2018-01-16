@@ -1,32 +1,12 @@
-../src/ap/drv_callbacks.o: ../src/ap/drv_callbacks.c \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/build_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/os.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpa_debug.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/eloop.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/radius/radius.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/drivers/driver.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_ctrl.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/crypto/random.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/p2p/p2p.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/fst/fst.h \
- ../src/ap/wnm_ap.h ../src/ap/hostapd.h ../src/ap/ap_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/ip_addr.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_common.h \
- ../src/ap/vlan.h ../src/ap/ieee802_11.h ../src/ap/ieee802_11_auth.h \
- ../src/ap/sta_info.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- ../src/ap/accounting.h ../src/ap/tkip_countermeasures.h \
- ../src/ap/ieee802_1x.h ../src/ap/wpa_auth.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/eapol_common.h \
- ../src/ap/wps_hostapd.h ../src/ap/ap_drv_ops.h ../src/ap/hw_features.h \
- ../src/ap/dfs.h ../src/ap/beacon.h ../src/ap/mbo_ap.h
+drv_callbacks.o: drv_callbacks.c ../utils/includes.h \
+ ../utils/build_config.h ../utils/common.h ../utils/os.h \
+ ../utils/wpa_debug.h ../utils/wpabuf.h ../utils/eloop.h \
+ ../radius/radius.h ../drivers/driver.h ../common/defs.h \
+ ../common/ieee802_11_defs.h ../utils/list.h \
+ ../common/ieee802_11_common.h ../common/defs.h ../common/wpa_ctrl.h \
+ ../crypto/random.h ../p2p/p2p.h ../wps/wps.h ../wps/wps_defs.h \
+ ../fst/fst.h wnm_ap.h hostapd.h ap_config.h ../utils/ip_addr.h \
+ ../common/wpa_common.h vlan.h ieee802_11.h ieee802_11_auth.h sta_info.h \
+ ../utils/list.h accounting.h tkip_countermeasures.h ieee802_1x.h \
+ wpa_auth.h ../common/eapol_common.h wps_hostapd.h ap_drv_ops.h \
+ hw_features.h dfs.h beacon.h mbo_ap.h

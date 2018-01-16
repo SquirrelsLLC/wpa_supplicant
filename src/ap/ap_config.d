@@ -1,29 +1,9 @@
-../src/ap/ap_config.o: ../src/ap/ap_config.c \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/build_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/os.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpa_debug.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/crypto/sha1.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/radius/radius_client.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/ip_addr.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/eapol_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/eap_common/eap_wsc_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/eap_server/eap.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/eap_common/eap_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/eap_server/eap_methods.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
- ../src/ap/wpa_auth.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_common.h \
- ../src/ap/sta_info.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- ../src/ap/vlan.h ../src/ap/ap_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/fst/fst.h
+ap_config.o: ap_config.c ../utils/includes.h ../utils/build_config.h \
+ ../utils/common.h ../utils/os.h ../utils/wpa_debug.h ../utils/wpabuf.h \
+ ../crypto/sha1.h ../radius/radius_client.h ../utils/ip_addr.h \
+ ../common/ieee802_11_defs.h ../common/eapol_common.h \
+ ../eap_common/eap_wsc_common.h ../eap_server/eap.h ../common/defs.h \
+ ../utils/list.h ../eap_common/eap_defs.h ../eap_server/eap_methods.h \
+ ../utils/wpabuf.h wpa_auth.h ../common/wpa_common.h sta_info.h \
+ ../utils/list.h vlan.h ap_config.h ../common/ieee802_11_common.h \
+ ../common/defs.h ../wps/wps.h ../wps/wps_defs.h ../fst/fst.h

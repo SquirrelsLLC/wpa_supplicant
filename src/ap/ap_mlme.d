@@ -1,24 +1,7 @@
-../src/ap/ap_mlme.o: ../src/ap/ap_mlme.c \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/build_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/os.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpa_debug.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_defs.h \
- ../src/ap/ieee802_11.h ../src/ap/wpa_auth.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/eapol_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_common.h \
- ../src/ap/sta_info.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- ../src/ap/vlan.h ../src/ap/ap_mlme.h ../src/ap/hostapd.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- ../src/ap/ap_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/ip_addr.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/fst/fst.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/drivers/driver.h
+ap_mlme.o: ap_mlme.c ../utils/includes.h ../utils/build_config.h \
+ ../utils/common.h ../utils/os.h ../utils/wpa_debug.h ../utils/wpabuf.h \
+ ../common/ieee802_11_defs.h ieee802_11.h wpa_auth.h ../common/defs.h \
+ ../common/eapol_common.h ../common/wpa_common.h sta_info.h \
+ ../utils/list.h vlan.h ap_mlme.h hostapd.h ../utils/list.h ap_config.h \
+ ../utils/ip_addr.h ../common/ieee802_11_common.h ../common/defs.h \
+ ../wps/wps.h ../wps/wps_defs.h ../fst/fst.h ../drivers/driver.h

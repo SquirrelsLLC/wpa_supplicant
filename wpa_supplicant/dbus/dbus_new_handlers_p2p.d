@@ -1,31 +1,31 @@
 dbus/dbus_new_handlers_p2p.o: dbus/dbus_new_handlers_p2p.c \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/build_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/os.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpa_debug.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/build_config.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/includes.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/common.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/os.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/wpa_debug.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
  dbus/../config.h dbus/../config_ssid.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/list.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/eap_peer/eap_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps_defs.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/defs.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/common/defs.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/list.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/eap_peer/eap_config.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/wps/wps.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_defs.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/common.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/wps/wps_defs.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/common/ieee802_11_common.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/common/defs.h \
  dbus/../wpa_supplicant_i.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/sae.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_ctrl.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/wps/wps_defs.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/common/sae.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/common/wpa_ctrl.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/wps/wps_defs.h \
  dbus/../wmm_ac.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/drivers/driver.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/drivers/driver.h \
  dbus/../wps_supplicant.h dbus/../notify.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/p2p/p2p.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/p2p/p2p.h \
  dbus/dbus_new_helpers.h /usr/include/dbus-1.0/dbus/dbus.h \
- /usr/lib/aarch64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
+ /usr/lib/x86_64-linux-gnu/dbus-1.0/include/dbus/dbus-arch-deps.h \
  /usr/include/dbus-1.0/dbus/dbus-macros.h \
  /usr/include/dbus-1.0/dbus/dbus-address.h \
  /usr/include/dbus-1.0/dbus/dbus-types.h \
@@ -44,13 +44,13 @@ dbus/dbus_new_handlers_p2p.o: dbus/dbus_new_handlers_p2p.c \
  /usr/include/dbus-1.0/dbus/dbus-threads.h dbus/dbus_new.h \
  dbus/dbus_new_handlers.h dbus/dbus_new_handlers_p2p.h \
  dbus/dbus_dict_helpers.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/ap/hostapd.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/ap/ap_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/utils/ip_addr.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/common/wpa_common.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/fst/fst.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/ap/vlan.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/ap/ap_config.h \
- /home/odroid/Development/Squirrels/wpa_supplicant/src/ap/wps_hostapd.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/wpabuf.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/ap/hostapd.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/ap/ap_config.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/utils/ip_addr.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/common/wpa_common.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/fst/fst.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/ap/vlan.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/ap/ap_config.h \
+ /home/stephen/Development/Squirrels/wpa_supplicant/src/ap/wps_hostapd.h \
  dbus/../p2p_supplicant.h dbus/../wifi_display.h
