@@ -4017,8 +4017,10 @@ void wpas_dbus_signal_p2p_find_stopped(struct wpa_supplicant *wpa_s)
 
 	iface = wpa_s->global->dbus;
 
+    /*
 	if (wpa_s->p2p_mgmt)
   		wpa_s = wpa_s->parent;
+        */
 
 	/* Do nothing if the control interface is not turned on */
 	if (iface == NULL || !wpa_s->dbus_new_path)
