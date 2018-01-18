@@ -1122,9 +1122,12 @@ void ap_sta_set_authorized(struct hostapd_data *hapd, struct sta_info *sta,
 {
 	const u8 *dev_addr = NULL;
 	char buf[100];
+	char ip_addr[100];
+	ip_addr[0] = '\0';
 #ifdef CONFIG_P2P
 	u8 addr[ETH_ALEN];
 	u8 ip_addr_buf[4];
+        u8 *ip = NULL;
 #endif /* CONFIG_P2P */
 
 	if (!!authorized == !!(sta->flags & WLAN_STA_AUTHORIZED))
@@ -1136,6 +1139,13 @@ void ap_sta_set_authorized(struct hostapd_data *hapd, struct sta_info *sta,
 		sta->flags &= ~WLAN_STA_AUTHORIZED;
 
 #ifdef CONFIG_P2P
+	if (wpa_auth_get_ip_addr(sta->wpa_sm, ip_addr_buf) == 0) {
+                ip = &ip_addr_buffer[0];
+		os_snprintf(ip_addr, sizeof(ip_addr),
+			    " ip_addr=%u.%u.%u.%u",
+			    ip_addr_buf[0], ip_addr_buf[1],
+			    ip_addr_buf[2], ip_addr_buf[3]);
+	}
 	if (hapd->p2p_group == NULL) {
 		if (sta->p2p_ie != NULL &&
 		    p2p_parse_dev_addr_in_p2p_ie(sta->p2p_ie, addr) == 0)
@@ -1152,20 +1162,9 @@ void ap_sta_set_authorized(struct hostapd_data *hapd, struct sta_info *sta,
 
 	if (hapd->sta_authorized_cb)
 		hapd->sta_authorized_cb(hapd->sta_authorized_cb_ctx,
-					sta->addr, authorized, dev_addr);
+					sta->addr, authorized, dev_addr, ip);
 
 	if (authorized) {
-		char ip_addr[100];
-		ip_addr[0] = '\0';
-#ifdef CONFIG_P2P
-		if (wpa_auth_get_ip_addr(sta->wpa_sm, ip_addr_buf) == 0) {
-			os_snprintf(ip_addr, sizeof(ip_addr),
-				    " ip_addr=%u.%u.%u.%u",
-				    ip_addr_buf[0], ip_addr_buf[1],
-				    ip_addr_buf[2], ip_addr_buf[3]);
-		}
-#endif /* CONFIG_P2P */
-
 		wpa_msg(hapd->msg_ctx, MSG_INFO, AP_STA_CONNECTED "%s%s",
 			buf, ip_addr);
 

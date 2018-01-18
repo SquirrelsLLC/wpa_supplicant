@@ -85,7 +85,8 @@ void wpas_notify_resume(struct wpa_global *global);
 
 void wpas_notify_sta_authorized(struct wpa_supplicant *wpa_s,
 				const u8 *mac_addr, int authorized,
-				const u8 *p2p_dev_addr);
+				const u8 *p2p_dev_addr,
+				const u8 *ip);
 void wpas_notify_p2p_find_stopped(struct wpa_supplicant *wpa_s);
 void wpas_notify_p2p_device_found(struct wpa_supplicant *wpa_s,
 				  const u8 *dev_addr, int new_device);
@@ -114,7 +115,7 @@ void wpas_notify_p2p_provision_discovery(struct wpa_supplicant *wpa_s,
 					 unsigned int generated_pin);
 void wpas_notify_p2p_group_started(struct wpa_supplicant *wpa_s,
 				   struct wpa_ssid *ssid, int persistent,
-				   int client);
+				   int client, const u8 *ip);
 void wpas_notify_p2p_group_formation_failure(struct wpa_supplicant *wpa_s,
 					     const char *reason);
 void wpas_notify_persistent_group_added(struct wpa_supplicant *wpa_s,

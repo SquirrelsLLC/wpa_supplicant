@@ -669,12 +669,12 @@ void wpas_notify_p2p_provision_discovery(struct wpa_supplicant *wpa_s,
 
 void wpas_notify_p2p_group_started(struct wpa_supplicant *wpa_s,
 				   struct wpa_ssid *ssid, int persistent,
-				   int client)
+				   int client, const u8 *ip)
 {
 	/* Notify a group has been started */
 	wpas_dbus_register_p2p_group(wpa_s, ssid);
 
-	wpas_dbus_signal_p2p_group_started(wpa_s, client, persistent);
+	wpas_dbus_signal_p2p_group_started(wpa_s, client, persistent, ip);
 }
 
 
@@ -707,7 +707,8 @@ void wpas_notify_p2p_invitation_received(struct wpa_supplicant *wpa_s,
 
 static void wpas_notify_ap_sta_authorized(struct wpa_supplicant *wpa_s,
 					  const u8 *sta,
-					  const u8 *p2p_dev_addr)
+					  const u8 *p2p_dev_addr,
+					  const u8 *ip)
 {
 #ifdef CONFIG_P2P
 	wpas_p2p_notify_ap_sta_authorized(wpa_s, p2p_dev_addr);
@@ -721,7 +722,7 @@ static void wpas_notify_ap_sta_authorized(struct wpa_supplicant *wpa_s,
 #endif /* CONFIG_P2P */
 
 	/* Notify listeners a new station has been authorized */
-	wpas_dbus_signal_sta_authorized(wpa_s, sta);
+	wpas_dbus_signal_sta_authorized(wpa_s, ip, sta);
 }
 
 
@@ -745,10 +746,11 @@ static void wpas_notify_ap_sta_deauthorized(struct wpa_supplicant *wpa_s,
 
 void wpas_notify_sta_authorized(struct wpa_supplicant *wpa_s,
 				const u8 *mac_addr, int authorized,
-				const u8 *p2p_dev_addr)
+				const u8 *p2p_dev_addr, 
+                                const u8 *ip)
 {
 	if (authorized)
-		wpas_notify_ap_sta_authorized(wpa_s, mac_addr, p2p_dev_addr);
+		wpas_notify_ap_sta_authorized(wpa_s, mac_addr, p2p_dev_addr, ip);
 	else
 		wpas_notify_ap_sta_deauthorized(wpa_s, mac_addr, p2p_dev_addr);
 }

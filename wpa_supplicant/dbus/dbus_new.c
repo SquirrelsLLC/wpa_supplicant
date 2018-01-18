@@ -873,12 +873,13 @@ void wpas_dbus_signal_eap_status(struct wpa_supplicant *wpa_s,
  * wpas_dbus_signal_sta - Send a station related event signal
  * @wpa_s: %wpa_supplicant network interface data
  * @sta: station mac address
+ * @ip: IP Address of station (StaAuthorized only), or NULL
  * @sig_name: signal name - StaAuthorized or StaDeauthorized
  *
  * Notify listeners about event related with station
  */
 static void wpas_dbus_signal_sta(struct wpa_supplicant *wpa_s,
-				 const u8 *sta, const char *sig_name)
+				 const u8 *sta, const u8 *ip, const char *sig_name)
 {
 	struct wpas_dbus_priv *iface;
 	DBusMessage *msg;
@@ -900,7 +901,11 @@ static void wpas_dbus_signal_sta(struct wpa_supplicant *wpa_s,
 		return;
 
 	if (dbus_message_append_args(msg, DBUS_TYPE_STRING, &dev_mac,
-				     DBUS_TYPE_INVALID))
+				     DBUS_TYPE_INVALID) && (
+		(ip && 
+		    wpa_dbus_dict_append_byte_array(&dict_iter, "IpAddr",
++                                              (char *) ip, 4)) ||
+		    ip == NULL))
 		dbus_connection_send(iface->con, msg, NULL);
 	else
 		wpa_printf(MSG_ERROR, "dbus: Failed to construct signal");
@@ -915,13 +920,15 @@ static void wpas_dbus_signal_sta(struct wpa_supplicant *wpa_s,
  * wpas_dbus_signal_sta_authorized - Send a STA authorized signal
  * @wpa_s: %wpa_supplicant network interface data
  * @sta: station mac address
+ * @ip: When group role is GO, it contains the IP address assigned 
+ *      to the station in EAPOL, otherwise NULL
  *
  * Notify listeners a new station has been authorized
  */
 void wpas_dbus_signal_sta_authorized(struct wpa_supplicant *wpa_s,
-				     const u8 *sta)
+				     const u8 *sta, const u8 *ip)
 {
-	wpas_dbus_signal_sta(wpa_s, sta, "StaAuthorized");
+	wpas_dbus_signal_sta(wpa_s, sta, ip, "StaAuthorized");
 }
 
 
@@ -935,7 +942,7 @@ void wpas_dbus_signal_sta_authorized(struct wpa_supplicant *wpa_s,
 void wpas_dbus_signal_sta_deauthorized(struct wpa_supplicant *wpa_s,
 				       const u8 *sta)
 {
-	wpas_dbus_signal_sta(wpa_s, sta, "StaDeauthorized");
+	wpas_dbus_signal_sta(wpa_s, sta, NULL, "StaDeauthorized");
 }
 
 
@@ -1256,9 +1263,12 @@ static void peer_groups_changed(struct wpa_supplicant *wpa_s)
  * @wpa_s: %wpa_supplicant network interface data
  * @client: this device is P2P client
  * @persistent: 0 - non persistent group, 1 - persistent group
+ * @ip: When group role is client, it contains local IP address, netmask, and
+ *     GO's IP address, if assigned; otherwise, NULL
  */
 void wpas_dbus_signal_p2p_group_started(struct wpa_supplicant *wpa_s,
-					int client, int persistent)
+                                       int client, int persistent,
+                                       const u8 *ip)
 {
 	DBusMessage *msg;
 	DBusMessageIter iter, dict_iter;
@@ -1300,6 +1310,13 @@ void wpas_dbus_signal_p2p_group_started(struct wpa_supplicant *wpa_s,
 	    !wpa_dbus_dict_append_bool(&dict_iter, "persistent", persistent) ||
 	    !wpa_dbus_dict_append_object_path(&dict_iter, "group_object",
 					      wpa_s->dbus_groupobj_path) ||
+           (ip &&
+            (!wpa_dbus_dict_append_byte_array(&dict_iter, "IpAddr",
+                                              (char *) ip, 4) ||
+             !wpa_dbus_dict_append_byte_array(&dict_iter, "IpAddrMask",
+                                              (char *) ip + 4, 4) ||
+             !wpa_dbus_dict_append_byte_array(&dict_iter, "IpAddrGo",
+                                              (char *) ip + 8, 4))) ||
 	    !wpa_dbus_dict_close_write(&iter, &dict_iter)) {
 		wpa_printf(MSG_ERROR, "dbus: Failed to construct signal");
 	} else {
