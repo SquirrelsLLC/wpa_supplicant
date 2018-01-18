@@ -883,6 +883,7 @@ static void wpas_dbus_signal_sta(struct wpa_supplicant *wpa_s,
 {
 	struct wpas_dbus_priv *iface;
 	DBusMessage *msg;
+	DBusMessageIter iter, dict_iter;
 	char sta_mac[WPAS_DBUS_OBJECT_PATH_MAX];
 	char *dev_mac;
 
@@ -900,15 +901,22 @@ static void wpas_dbus_signal_sta(struct wpa_supplicant *wpa_s,
 	if (msg == NULL)
 		return;
 
-	if (dbus_message_append_args(msg, DBUS_TYPE_STRING, &dev_mac,
-				     DBUS_TYPE_INVALID) && (
-		(ip && 
-		    wpa_dbus_dict_append_byte_array(&dict_iter, "IpAddr",
-+                                              (char *) ip, 4)) ||
-		    ip == NULL))
-		dbus_connection_send(iface->con, msg, NULL);
-	else
+	dbus_message_iter_init_append(msg, &iter);
+	/*
+	 * In case the device supports creating a separate interface the
+	 * DBus client will need to know the object path for the interface
+	 * object this group was created on, so include it here.
+	 */
+	if (!wpa_dbus_dict_open_write(&iter, &dict_iter) ||
+	    !wpa_dbus_dict_append_string(&dict_iter, "Address", dev_mac) ||
+           (ip &&
+            (!wpa_dbus_dict_append_byte_array(&dict_iter, "IpAddr",
+                                              (char *) ip, 4))) ||
+	    !wpa_dbus_dict_close_write(&iter, &dict_iter)) {
 		wpa_printf(MSG_ERROR, "dbus: Failed to construct signal");
+	} else {
+		dbus_connection_send(iface->con, msg, NULL);
+        }
 	dbus_message_unref(msg);
 
 	wpa_printf(MSG_DEBUG, "dbus: Station MAC address '%s' '%s'",

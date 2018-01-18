@@ -1140,7 +1140,7 @@ void ap_sta_set_authorized(struct hostapd_data *hapd, struct sta_info *sta,
 
 #ifdef CONFIG_P2P
 	if (wpa_auth_get_ip_addr(sta->wpa_sm, ip_addr_buf) == 0) {
-                ip = &ip_addr_buffer[0];
+                ip = &ip_addr_buf[0];
 		os_snprintf(ip_addr, sizeof(ip_addr),
 			    " ip_addr=%u.%u.%u.%u",
 			    ip_addr_buf[0], ip_addr_buf[1],
