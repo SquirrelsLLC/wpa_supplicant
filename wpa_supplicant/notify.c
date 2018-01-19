@@ -722,7 +722,7 @@ static void wpas_notify_ap_sta_authorized(struct wpa_supplicant *wpa_s,
 #endif /* CONFIG_P2P */
 
 	/* Notify listeners a new station has been authorized */
-	wpas_dbus_signal_sta_authorized(wpa_s, ip, sta);
+	wpas_dbus_signal_sta_authorized(wpa_s, sta, ip);
 }
 
 

@@ -884,11 +884,9 @@ static void wpas_dbus_signal_sta(struct wpa_supplicant *wpa_s,
 	struct wpas_dbus_priv *iface;
 	DBusMessage *msg;
 	DBusMessageIter iter, dict_iter;
-	char sta_mac[WPAS_DBUS_OBJECT_PATH_MAX];
-	char *dev_mac;
+        char sta_mac[WPAS_DBUS_OBJECT_PATH_MAX];
 
-	os_snprintf(sta_mac, WPAS_DBUS_OBJECT_PATH_MAX, MACSTR, MAC2STR(sta));
-	dev_mac = sta_mac;
+        os_snprintf(sta_mac, WPAS_DBUS_OBJECT_PATH_MAX, MACSTR, MAC2STR(sta));
 
 	iface = wpa_s->global->dbus;
 
@@ -908,7 +906,7 @@ static void wpas_dbus_signal_sta(struct wpa_supplicant *wpa_s,
 	 * object this group was created on, so include it here.
 	 */
 	if (!wpa_dbus_dict_open_write(&iter, &dict_iter) ||
-	    !wpa_dbus_dict_append_string(&dict_iter, "Address", dev_mac) ||
+	    !wpa_dbus_dict_append_byte_array(&dict_iter, "Address", (char *)sta, 6) ||
            (ip &&
             (!wpa_dbus_dict_append_byte_array(&dict_iter, "IpAddr",
                                               (char *) ip, 4))) ||
@@ -3557,7 +3555,7 @@ static const struct wpa_dbus_signal_desc wpas_dbus_interface_signals[] = {
 	},
 	{ "StaAuthorized", WPAS_DBUS_NEW_IFACE_INTERFACE,
 	  {
-		  { "name", "s", ARG_OUT },
+		  { "name", "a{sv}", ARG_OUT },
 		  END_ARGS
 	  }
 	},

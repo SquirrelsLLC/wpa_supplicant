@@ -7005,8 +7005,11 @@ void wpas_p2p_completed(struct wpa_supplicant *wpa_s)
 	if (persistent)
 		wpas_p2p_store_persistent_group(wpa_s->p2pdev,
 						ssid, go_dev_addr);
-
-	wpas_notify_p2p_group_started(wpa_s, ssid, persistent, 1, ip);
+        if (ip_addr[0] == '\0') {
+		wpas_notify_p2p_group_started(wpa_s, ssid, persistent, 1, NULL);
+        } else {
+		wpas_notify_p2p_group_started(wpa_s, ssid, persistent, 1, ip);
+        }
 }
 
 
